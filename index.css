@@ -1,0 +1,16 @@
+body {
+  background-color: #282828;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+}
+
+header {
+  height: 99px;
+  background-color: #222;
+  color: #FFDE00;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  border-bottom: 1px solid #999;
+}
