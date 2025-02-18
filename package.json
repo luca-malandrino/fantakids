@@ -10,8 +10,8 @@
     "url": "git+https://github.com/luca-malandrino/fantakids.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Luca Malandrino",
+  "license": "MIT",
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/luca-malandrino/fantakids/issues"
@@ -20,5 +20,9 @@
   "description": "",
   "dependencies": {
     "firebase": "^11.3.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
   }
 }
