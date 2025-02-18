@@ -5,7 +5,7 @@ body {
   padding: 0;
 }
 
-header {
+header, footer {
   height: 99px;
   background-color: #222;
   color: #FFDE00;
@@ -13,4 +13,36 @@ header {
   align-items: center;
   padding-left: 30px;
   border-bottom: 1px solid #999;
+  position: fixed;
+  width: 100%;
+}
+
+footer {
+  bottom: 0;
+  height: 56px;
+  justify-content: space-evenly;
+  color: #b2b2b2;
+  align-items: center;
+}
+
+i {
+  height: 100%;
+  margin: auto 0;
+  font-size: 32px;
+  text-align: center;
+  padding-top: 9px;
+  border-top: 2.5px solid #ffffff00;
+}
+
+.fa-house {
+  aspect-ratio: 1 / 1;
+}
+
+.fa-scale-balanced {
+  aspect-ratio: 81 / 65;
+}
+
+.active {
+  color: #FFDE00;
+  border-top: 2.5px solid #FFDE00;
 }

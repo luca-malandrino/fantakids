@@ -1,11 +1,12 @@
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js'
-import { getDatabase, ref, push, remove } from 'https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js'
+const houseIcon = document.querySelector('.fa-house')
+const scaleIcon = document.querySelector('.fa-scale-balanced')
+const main = document.querySelector('main')
+const icons = [houseIcon, scaleIcon]
 
-const firebaseConfig = {
-  databaseURL : 'https://fantakids-default-rtdb.europe-west1.firebasedatabase.app/'
-}
-
-const app = initializeApp(firebaseConfig)
-const database = getDatabase(app)
-const famRef = ref(database, 'fam')
-const countRef = ref(database, 'count')
+icons.forEach(icon => {
+  icon.addEventListener('click', e => {
+    houseIcon.classList.remove('active')
+    scaleIcon.classList.remove('active')
+    e.target.classList.add('active')
+  })
+})

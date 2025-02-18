@@ -1,0 +1,24 @@
+{
+  "name": "fantakids",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luca-malandrino/fantakids.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/luca-malandrino/fantakids/issues"
+  },
+  "homepage": "https://github.com/luca-malandrino/fantakids#readme",
+  "description": "",
+  "dependencies": {
+    "firebase": "^11.3.1"
+  }
+}
