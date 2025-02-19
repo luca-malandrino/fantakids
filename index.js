@@ -1,5 +1,5 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js'
-import { getDatabase } from 'https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js'
+import { getDatabase, onValue, ref, set } from 'https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js'
 
 const firebaseConfig = {
   apiKey: "AIzaSyASfWL6hCF5EUikZNPJMtiqu2aNsfxd2po",
@@ -10,8 +10,8 @@ const firebaseConfig = {
   messagingSenderId: "292289812565",
   appId: "1:292289812565:web:a6f3c266edc06a0a7adcdc"
 }; 
-const firebaseApp = initializeApp(firebaseConfig)
-const db = getDatabase(firebaseApp)
+const app = initializeApp(firebaseConfig)
+const db = getDatabase(app)
 
 const houseIcon = document.querySelector('.fa-house')
 const scaleIcon = document.querySelector('.fa-scale-balanced')
