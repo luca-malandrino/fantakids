@@ -17,7 +17,7 @@ const db = getFirestore(app)
 const familyCollection = collection(db, 'family')
 const childrenDocRef = doc(familyCollection, 'children')
 
-setDoc(childrenDocRef, { anna: 0, luca: 0, marco: 0 })
+setDoc(childrenDocRef, { anna: 20, luca: 10, marco: 1 })
 
 const houseIcon = document.querySelector('.fa-house')
 const scaleIcon = document.querySelector('.fa-scale-balanced')
