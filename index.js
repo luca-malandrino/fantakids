@@ -1,5 +1,5 @@
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js'
-import { getDatabase, onValue, ref, set } from 'https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js'
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, setDoc, doc } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyASfWL6hCF5EUikZNPJMtiqu2aNsfxd2po",
@@ -9,9 +9,15 @@ const firebaseConfig = {
   storageBucket: "fantakids.firebasestorage.app",
   messagingSenderId: "292289812565",
   appId: "1:292289812565:web:a6f3c266edc06a0a7adcdc"
-}; 
-const app = initializeApp(firebaseConfig)
-const db = getDatabase(app)
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app)
+
+const familyCollection = collection(db, 'family')
+const childrenDocRef = doc(familyCollection, 'children')
+
+setDoc(childrenDocRef, { anna: 0, luca: 0, marco: 0 })
 
 const houseIcon = document.querySelector('.fa-house')
 const scaleIcon = document.querySelector('.fa-scale-balanced')
