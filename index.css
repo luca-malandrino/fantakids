@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   padding: 0;
+  width: 100vw;
 }
 
 header, footer {
@@ -45,4 +46,132 @@ i {
 .active {
   color: #FFDE00;
   border-top: 2.5px solid #FFDE00;
+}
+
+main {
+  position: absolute;
+  top: 100px;
+}
+
+#bar {
+  display: flex;
+  width: 333px;
+  background-color: #1e1e1e;
+  margin-top: 37.5px;
+  margin-left: 50vw;
+  transform: translate(-50%, 0%);
+  height: 45px;
+  border-radius: 10px;
+  justify-content: space-evenly;
+}
+
+.divider {
+  background: #5d5d5d;
+  height: 100%;
+  width: 1px;
+  z-index: 2;
+  position: relative;
+}
+
+.numbers {
+  padding: 0 calc(50vw - 166.5px);
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: bold;
+  font-size: 12px;
+  width: 333px;
+  color: white;
+  margin-top: -63px;
+}
+
+.number::before {
+  content: '';
+  height: 45px;
+  width: 2px;
+  background: #5d5d5d;
+  display: inline-block;
+  transform: translate(12px, -27px);
+  z-index: 2;
+  position: relative;
+}
+
+#progress {
+  height: 45px;
+  border-radius: 10px 0 0 10px;
+  width: 200px;
+  background: #FFDE00;
+  left: calc(50vw - 166.5px);
+  z-index: 1;
+  transform: translate(0, -100%);
+  position: relative;
+}
+
+h2 {
+  margin-left: calc(50vw - 166.5px);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 59.5px;
+}
+
+.first {
+  color: #FFDE00;
+}
+
+.second {
+  color: #aaa;
+}
+
+.third {
+  color: #774100;
+}
+
+.child {
+  display: block;
+  width: 333px;
+  border-radius: 10px;
+  height: 67px;
+  margin: 0 auto 27.5px auto;
+  background: #1e1e1e;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.fa-trophy {
+  font-size: 30.5px;
+  height: 30.5px;
+  aspect-ratio: 1;
+  padding-top: 0;
+}
+
+.child button {
+  width: 36.5px;
+  aspect-ratio: 1;
+  border-radius: 36.5px;
+  border: none;
+  background: #A9A9A9;
+  color: #282828;
+  font-size: 32px;
+  padding: 0;
+  font-weight: bold;
+}
+
+.stats {
+  width: 193.5px;
+  height: 42px;
+  overflow: hidden;
+  color: #aaa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.nums {
+  display: flex;
 }

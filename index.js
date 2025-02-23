@@ -17,8 +17,6 @@ const db = getFirestore(app)
 const familyCollection = collection(db, 'family')
 const childrenDocRef = doc(familyCollection, 'children')
 
-setDoc(childrenDocRef, { anna: 20, luca: 10, marco: 1 })
-
 const houseIcon = document.querySelector('.fa-house')
 const scaleIcon = document.querySelector('.fa-scale-balanced')
 const main = document.querySelector('main')
@@ -29,5 +27,75 @@ icons.forEach(icon => {
     houseIcon.classList.remove('active')
     scaleIcon.classList.remove('active')
     e.target.classList.add('active')
+    render('obj')
   })
 })
+
+function render(obj) {
+  if(houseIcon.classList.contains('active')) {
+    main.innerHTML = /*html*/`
+    <section class="bar-section">
+      <div id="bar"></div>
+      
+      <div id="progress"></div>
+
+      <div class="numbers">
+        <span class="number">250</span>
+        <span class="number">500</span>
+        <span class="number">750</span>
+      </div>
+
+      <h2>Redeem your <span style="color: #FFDE00">prize</span></h2>
+    </section>
+
+    <section class="leaderboard">
+      <div class="child">
+        <i class="fa-solid fa-trophy first"></i>
+        <div class="stats">
+          <div class="name">Luca Malandrino</div>
+          <div class="nums">
+            <div class="points positive">+40pts</div>
+            <div class="money">
+              <i class="fa-solid fa-money-bills"></i>
+              <div>2,00</div>
+            </div>
+          </div>
+        </div>
+        <button>+</button>
+      </div>
+      <div class="child">
+        <i class="fa-solid fa-trophy second"></i>
+        <div class="stats">
+          <div class="name">Luca Malandrino</div>
+          <div class="nums">
+            <div class="points positive">+40pts</div>
+            <div class="money">
+              <i class="fa-solid fa-money-bills"></i>
+              <div>2,00</div>
+            </div>
+          </div>
+        </div>
+        <button>+</button>
+      </div>
+      <div class="child">
+        <i class="fa-solid fa-trophy third"></i>
+        <div class="stats">
+          <div class="name">Luca Malandrino</div>
+          <div class="nums">
+            <div class="points positive">+40pts</div>
+            <div class="money">
+              <i class="fa-solid fa-money-bills"></i>
+              <div>2,00</div>
+            </div>
+          </div>
+        </div>
+        <button>+</button>
+      </div>
+    </section>
+    `
+  } else {
+    main.innerHTML = ``
+  }
+}
+
+render('obj')
