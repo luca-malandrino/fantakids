@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, setDoc, doc } from "firebase/firestore";
+import { getFirestore, collection, setDoc, doc, getDoc } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyASfWL6hCF5EUikZNPJMtiqu2aNsfxd2po",
@@ -27,11 +27,24 @@ icons.forEach(icon => {
     houseIcon.classList.remove('active')
     scaleIcon.classList.remove('active')
     e.target.classList.add('active')
-    render('obj')
+    render()
   })
 })
 
-function render(obj) {
+function render() {
+  getDoc(childrenDocRef).then(snapshot => {
+    if(snapshot.exists()) {
+      const snapshotData = snapshot.data()
+      const totalCount = snapshotData.totalCount
+      const children = [{'Luca Malandrino': snapshotData.luca},
+                  {'Marco Malandrino': snapshotData.marco},
+                  {'Anna Malandrino': snapshotData.anna}]
+      children.sort((a, b) => Object.values(b)[0] - Object.values(a)[0])
+
+      console.log(children)
+    }
+  })
+
   if(houseIcon.classList.contains('active')) {
     main.innerHTML = /*html*/`
     <section class="bar-section">

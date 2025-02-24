@@ -170,8 +170,28 @@ h2 {
 
 .name {
   font-weight: bold;
+  margin-bottom: 2px;
 }
 
 .nums {
+  font-size: 12px;
   display: flex;
+  gap: 48px;
+}
+
+.fa-money-bills {
+  font-size: 10.5px;
+  padding-top: 0;
+}
+
+.money div {
+  display: inline-block;
+}
+
+.positive {
+  color: #009500;
+}
+
+.points {
+  font-weight: bold;
 }
