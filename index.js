@@ -113,7 +113,91 @@ function render() {
       document.getElementById('progress').style.width = ((totalCount / 1000) * 333) + 'px'
 
     } else {
-      main.innerHTML = ``
+      main.innerHTML = /* html */ `
+      <section class="bonuses">
+        <div class="bonus">
+          <div class="bonus-name">Pratica le pratiche</div>
+          <div class="bonus-points positive">+40pts</div>
+          <div class="buttons">
+            <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
+            <div class="button" data-points="40" data-child="Luca Malandrino">M</div>
+            <div class="button" data-points="40" data-child="Luca Malandrino">A</div>
+          </div>
+        </div>
+        <div class="bonus">
+          <div class="bonus-name">Dolby sorround</div>
+          <div class="bonus-points positive">+40pts</div>
+          <div class="buttons">
+            <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
+            <div class="button" data-points="40" data-child="Luca Malandrino">M</div>
+            <div class="button" data-points="40" data-child="Luca Malandrino">A</div>
+          </div>
+        </div>
+        <div class="bonus">
+          <div class="bonus-name">Dream team</div>
+          <div class="bonus-points positive">+40pts</div>
+          <div class="buttons">
+            <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
+            <div class="button" data-points="40" data-child="Luca Malandrino">M</div>
+            <div class="button" data-points="40" data-child="Luca Malandrino">A</div>
+          </div>
+        </div>
+        <div class="bonus">
+          <div class="bonus-name">I don't know why</div>
+          <div class="bonus-points positive">+40pts</div>
+          <div class="buttons">
+            <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
+            <div class="button" data-points="40" data-child="Luca Malandrino">M</div>
+            <div class="button" data-points="40" data-child="Luca Malandrino">A</div>
+          </div>
+        </div>
+        <div class="bonus">
+          <div class="bonus-name">Look total school</div>
+          <div class="bonus-points positive">+40pts</div>
+          <div class="buttons">
+            <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
+            <div class="button" data-points="40" data-child="Luca Malandrino">M</div>
+            <div class="button" data-points="40" data-child="Luca Malandrino">A</div>
+          </div>
+        </div>
+        <div class="bonus">
+          <div class="bonus-name">Hell's kitchen? No grazie!</div>
+          <div class="bonus-points positive">+40pts</div>
+          <div class="buttons">
+            <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
+            <div class="button" data-points="40" data-child="Luca Malandrino">M</div>
+            <div class="button" data-points="40" data-child="Luca Malandrino">A</div>
+          </div>
+        </div>
+        <div class="bonus">
+          <div class="bonus-name">Rita Levi-Montalcini</div>
+          <div class="bonus-points positive">+40pts</div>
+          <div class="buttons">
+            <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
+            <div class="button" data-points="40" data-child="Luca Malandrino">M</div>
+            <div class="button" data-points="40" data-child="Luca Malandrino">A</div>
+          </div>
+        </div>
+        <div class="bonus">
+          <div class="bonus-name">Ready-Steady-GO!</div>
+          <div class="bonus-points positive">+40pts</div>
+          <div class="buttons">
+            <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
+            <div class="button" data-points="40" data-child="Luca Malandrino">M</div>
+            <div class="button" data-points="40" data-child="Luca Malandrino">A</div>
+          </div>
+        </div>
+        <div class="bonus">
+          <div class="bonus-name">Amplifon</div>
+          <div class="bonus-points positive">+40pts</div>
+          <div class="buttons">
+            <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
+            <div class="button" data-points="40" data-child="Luca Malandrino">M</div>
+            <div class="button" data-points="40" data-child="Luca Malandrino">A</div>
+          </div>
+        </div>
+      </section>
+      `
     }
   })
 }

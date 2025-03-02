@@ -1,0 +1,7 @@
+{
+  "name": "FantaFamily",
+  "short_name": "FantaFamily",
+  "theme_color": "#F24F3F",
+  "background_color": "#282828",
+  "display": "standalone"
+}

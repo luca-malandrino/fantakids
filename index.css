@@ -4,6 +4,7 @@ body {
   font-family: 'Poppins', sans-serif;
   padding: 0;
   width: 100vw;
+  color: #b2b2b2;
 }
 
 header, footer {
@@ -16,6 +17,7 @@ header, footer {
   border-bottom: 1px solid #999;
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 
 footer {
@@ -126,16 +128,32 @@ h2 {
   color: #774100;
 }
 
-.child {
-  display: block;
+.child, .bonus {
   width: 333px;
   border-radius: 10px;
   height: 67px;
-  margin: 0 auto 27.5px auto;
+  margin-bottom: 27.5px;
   background: #1e1e1e;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.bonus {
+  width: 450px;
+}
+
+.leaderboard, .bonuses {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  width: 95vw;
+  margin: 0 auto;
+  position: static;
+  margin-top: 30px;
+  margin-bottom: 140px;
 }
 
 .fa-trophy {
@@ -202,4 +220,22 @@ h2 {
 
 .negative {
   color: #d80000;
+}
+
+.button {
+  width: 30px;
+  aspect-ratio: 1;
+  background-color: #2b2b2b;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.buttons {
+  width: 130px;
+  display: flex;
+  justify-content: space-around;
+}
+
+*:active, *:focus {
+  opacity: .8;
 }
