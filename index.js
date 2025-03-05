@@ -120,8 +120,8 @@ function render() {
           <div class="bonus-points positive">+40pts</div>
           <div class="buttons">
             <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
-            <div class="button" data-points="40" data-child="Luca Malandrino">M</div>
-            <div class="button" data-points="40" data-child="Luca Malandrino">A</div>
+            <div class="button" data-points="40" data-child="Marco Malandrino">M</div>
+            <div class="button" data-points="40" data-child="Anna Malandrino">A</div>
           </div>
         </div>
         <div class="bonus">
@@ -129,8 +129,8 @@ function render() {
           <div class="bonus-points positive">+40pts</div>
           <div class="buttons">
             <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
-            <div class="button" data-points="40" data-child="Luca Malandrino">M</div>
-            <div class="button" data-points="40" data-child="Luca Malandrino">A</div>
+            <div class="button" data-points="40" data-child="Marco Malandrino">M</div>
+            <div class="button" data-points="40" data-child="Anna Malandrino">A</div>
           </div>
         </div>
         <div class="bonus">
@@ -138,8 +138,8 @@ function render() {
           <div class="bonus-points positive">+40pts</div>
           <div class="buttons">
             <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
-            <div class="button" data-points="40" data-child="Luca Malandrino">M</div>
-            <div class="button" data-points="40" data-child="Luca Malandrino">A</div>
+            <div class="button" data-points="40" data-child="Marco Malandrino">M</div>
+            <div class="button" data-points="40" data-child="Anna Malandrino">A</div>
           </div>
         </div>
         <div class="bonus">
@@ -147,8 +147,8 @@ function render() {
           <div class="bonus-points positive">+40pts</div>
           <div class="buttons">
             <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
-            <div class="button" data-points="40" data-child="Luca Malandrino">M</div>
-            <div class="button" data-points="40" data-child="Luca Malandrino">A</div>
+            <div class="button" data-points="40" data-child="Marco Malandrino">M</div>
+            <div class="button" data-points="40" data-child="Anna Malandrino">A</div>
           </div>
         </div>
         <div class="bonus">
@@ -156,8 +156,8 @@ function render() {
           <div class="bonus-points positive">+40pts</div>
           <div class="buttons">
             <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
-            <div class="button" data-points="40" data-child="Luca Malandrino">M</div>
-            <div class="button" data-points="40" data-child="Luca Malandrino">A</div>
+            <div class="button" data-points="40" data-child="Marco Malandrino">M</div>
+            <div class="button" data-points="40" data-child="Anna Malandrino">A</div>
           </div>
         </div>
         <div class="bonus">
@@ -165,8 +165,8 @@ function render() {
           <div class="bonus-points positive">+40pts</div>
           <div class="buttons">
             <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
-            <div class="button" data-points="40" data-child="Luca Malandrino">M</div>
-            <div class="button" data-points="40" data-child="Luca Malandrino">A</div>
+            <div class="button" data-points="40" data-child="Marco Malandrino">M</div>
+            <div class="button" data-points="40" data-child="Anna Malandrino">A</div>
           </div>
         </div>
         <div class="bonus">
@@ -174,8 +174,8 @@ function render() {
           <div class="bonus-points positive">+40pts</div>
           <div class="buttons">
             <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
-            <div class="button" data-points="40" data-child="Luca Malandrino">M</div>
-            <div class="button" data-points="40" data-child="Luca Malandrino">A</div>
+            <div class="button" data-points="40" data-child="Marco Malandrino">M</div>
+            <div class="button" data-points="40" data-child="Anna Malandrino">A</div>
           </div>
         </div>
         <div class="bonus">
@@ -183,8 +183,8 @@ function render() {
           <div class="bonus-points positive">+40pts</div>
           <div class="buttons">
             <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
-            <div class="button" data-points="40" data-child="Luca Malandrino">M</div>
-            <div class="button" data-points="40" data-child="Luca Malandrino">A</div>
+            <div class="button" data-points="40" data-child="Marco Malandrino">M</div>
+            <div class="button" data-points="40" data-child="Anna Malandrino">A</div>
           </div>
         </div>
         <div class="bonus">
@@ -192,8 +192,8 @@ function render() {
           <div class="bonus-points positive">+40pts</div>
           <div class="buttons">
             <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
-            <div class="button" data-points="40" data-child="Luca Malandrino">M</div>
-            <div class="button" data-points="40" data-child="Luca Malandrino">A</div>
+            <div class="button" data-points="40" data-child="Marco Malandrino">M</div>
+            <div class="button" data-points="40" data-child="Anna Malandrino">A</div>
           </div>
         </div>
       </section>
@@ -211,5 +211,37 @@ main.addEventListener('click', e => {
                       e.target.dataset.child === 'Marco Malandrino' ? {marco: 0} : {anna: 0}
     updateDoc(childrenDocRef, updateObj).then(console.log(updateObj))
     render()
+  } else if(e.target.dataset.points) {
+    getDoc(childrenDocRef).then(snapshot => {
+      let { anna, luca, marco, totalCount } = snapshot.data()
+      const points = Number(e.target.dataset.points)
+
+      switch(e.target.dataset.child) {
+        case 'Luca Malandrino':
+          luca += points
+          console.log('luca')
+          break
+        case 'Marco Malandrino':
+          marco += points
+          console.log('marco')
+          break
+        case 'Anna Malandrino':
+          anna += points
+          console.log('anna')
+          break
+      }
+      
+      totalCount += points
+      totalCount = totalCount % 1000
+
+      setDoc(childrenDocRef, {
+        luca: luca,
+        marco: marco,
+        anna: anna,
+        totalCount: totalCount
+      })
+
+      render()
+    })
   }
 })
