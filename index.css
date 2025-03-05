@@ -233,6 +233,7 @@ h2 {
   background-color: #2b2b2b;
   text-align: center;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 .buttons {
