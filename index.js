@@ -117,83 +117,110 @@ function render() {
       <section class="bonuses">
         <div class="bonus">
           <div class="bonus-name">Pratica le pratiche</div>
-          <div class="bonus-points positive">+40pts</div>
+          <div class="bonus-points positive">+5pts</div>
           <div class="buttons">
-            <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
-            <div class="button" data-points="40" data-child="Marco Malandrino">M</div>
-            <div class="button" data-points="40" data-child="Anna Malandrino">A</div>
+            <div class="button" data-points="5" data-child="Luca Malandrino">L</div>
+            <div class="button" data-points="5" data-child="Marco Malandrino">M</div>
+            <div class="button" data-points="5" data-child="Anna Malandrino">A</div>
           </div>
         </div>
         <div class="bonus">
           <div class="bonus-name">Dolby sorround</div>
-          <div class="bonus-points positive">+40pts</div>
+          <div class="bonus-points negative">-5pts</div>
           <div class="buttons">
-            <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
-            <div class="button" data-points="40" data-child="Marco Malandrino">M</div>
-            <div class="button" data-points="40" data-child="Anna Malandrino">A</div>
+            <div class="button" data-points="-5" data-child="Luca Malandrino">L</div>
+            <div class="button" data-points="-5" data-child="Marco Malandrino">M</div>
+            <div class="button" data-points="-5" data-child="Anna Malandrino">A</div>
           </div>
         </div>
         <div class="bonus">
           <div class="bonus-name">Dream team</div>
-          <div class="bonus-points positive">+40pts</div>
+          <div class="bonus-points positive">+10pts</div>
           <div class="buttons">
-            <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
-            <div class="button" data-points="40" data-child="Marco Malandrino">M</div>
-            <div class="button" data-points="40" data-child="Anna Malandrino">A</div>
+            <div class="button" data-points="10" data-child="Luca Malandrino">L</div>
+            <div class="button" data-points="10" data-child="Marco Malandrino">M</div>
+            <div class="button" data-points="10" data-child="Anna Malandrino">A</div>
           </div>
         </div>
         <div class="bonus">
           <div class="bonus-name">I don't know why</div>
-          <div class="bonus-points positive">+40pts</div>
+          <div class="bonus-points negative">-5pts</div>
           <div class="buttons">
-            <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
-            <div class="button" data-points="40" data-child="Marco Malandrino">M</div>
-            <div class="button" data-points="40" data-child="Anna Malandrino">A</div>
+            <div class="button" data-points="-5" data-child="Luca Malandrino">L</div>
+            <div class="button" data-points="-5" data-child="Marco Malandrino">M</div>
+            <div class="button" data-points="-5" data-child="Anna Malandrino">A</div>
           </div>
         </div>
         <div class="bonus">
           <div class="bonus-name">Look total school</div>
-          <div class="bonus-points positive">+40pts</div>
+          <div class="bonus-points positive">+2pts</div>
           <div class="buttons">
-            <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
-            <div class="button" data-points="40" data-child="Marco Malandrino">M</div>
-            <div class="button" data-points="40" data-child="Anna Malandrino">A</div>
+            <div class="button" data-points="2" data-child="Luca Malandrino">L</div>
+            <div class="button" data-points="2" data-child="Marco Malandrino">M</div>
+            <div class="button" data-points="2" data-child="Anna Malandrino">A</div>
           </div>
         </div>
         <div class="bonus">
           <div class="bonus-name">Hell's kitchen? No grazie!</div>
-          <div class="bonus-points positive">+40pts</div>
+          <div class="bonus-points positive">+5pts</div>
           <div class="buttons">
-            <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
-            <div class="button" data-points="40" data-child="Marco Malandrino">M</div>
-            <div class="button" data-points="40" data-child="Anna Malandrino">A</div>
+            <div class="button" data-points="5" data-child="Luca Malandrino">L</div>
+            <div class="button" data-points="5" data-child="Marco Malandrino">M</div>
+            <div class="button" data-points="5" data-child="Anna Malandrino">A</div>
           </div>
         </div>
         <div class="bonus">
           <div class="bonus-name">Rita Levi-Montalcini</div>
-          <div class="bonus-points positive">+40pts</div>
+          <div class="bonus-points positive">+8pts</div>
           <div class="buttons">
-            <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
-            <div class="button" data-points="40" data-child="Marco Malandrino">M</div>
-            <div class="button" data-points="40" data-child="Anna Malandrino">A</div>
+            <div class="button" data-points="8" data-child="Luca Malandrino">L</div>
+            <div class="button" data-points="8" data-child="Marco Malandrino">M</div>
+            <div class="button" data-points="8" data-child="Anna Malandrino">A</div>
           </div>
         </div>
         <div class="bonus">
           <div class="bonus-name">Ready-Steady-GO!</div>
-          <div class="bonus-points positive">+40pts</div>
+          <div class="bonus-points positive">+3pts</div>
           <div class="buttons">
-            <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
-            <div class="button" data-points="40" data-child="Marco Malandrino">M</div>
-            <div class="button" data-points="40" data-child="Anna Malandrino">A</div>
+            <div class="button" data-points="3" data-child="Luca Malandrino">L</div>
+            <div class="button" data-points="3" data-child="Marco Malandrino">M</div>
+            <div class="button" data-points="3" data-child="Anna Malandrino">A</div>
+          </div>
+        </div>
+        <div class="bonus">
+          <div class="bonus-name">Ready-Steady-NO!</div>
+          <div class="bonus-points negative">-3pts</div>
+          <div class="buttons">
+            <div class="button" data-points="-3" data-child="Luca Malandrino">L</div>
+            <div class="button" data-points="-3" data-child="Marco Malandrino">M</div>
+            <div class="button" data-points="-3" data-child="Anna Malandrino">A</div>
           </div>
         </div>
         <div class="bonus">
           <div class="bonus-name">Amplifon</div>
-          <div class="bonus-points positive">+40pts</div>
+          <div class="bonus-points negative">-7pts</div>
           <div class="buttons">
-            <div class="button" data-points="40" data-child="Luca Malandrino">L</div>
-            <div class="button" data-points="40" data-child="Marco Malandrino">M</div>
-            <div class="button" data-points="40" data-child="Anna Malandrino">A</div>
+            <div class="button" data-points="-7" data-child="Luca Malandrino">L</div>
+            <div class="button" data-points="-7" data-child="Marco Malandrino">M</div>
+            <div class="button" data-points="-7" data-child="Anna Malandrino">A</div>
+          </div>
+        </div>
+        <div class="bonus">
+          <div class="bonus-name">Look Total Bad</div>
+          <div class="bonus-points negative">-5pts</div>
+          <div class="buttons">
+            <div class="button" data-points="-5" data-child="Luca Malandrino">L</div>
+            <div class="button" data-points="-5" data-child="Marco Malandrino">M</div>
+            <div class="button" data-points="-5" data-child="Anna Malandrino">A</div>
+          </div>
+        </div>
+        <div class="bonus">
+          <div class="bonus-name">The Sleeping Beauty</div>
+          <div class="bonus-points negative">-5pts</div>
+          <div class="buttons">
+            <div class="button" data-points="-5" data-child="Luca Malandrino">L</div>
+            <div class="button" data-points="-5" data-child="Marco Malandrino">M</div>
+            <div class="button" data-points="-5" data-child="Anna Malandrino">A</div>
           </div>
         </div>
       </section>
@@ -233,6 +260,7 @@ main.addEventListener('click', e => {
       
       totalCount += points
       totalCount = totalCount % 1000
+      totalCount = totalCount < 0 ? 0 : totalCount
 
       setDoc(childrenDocRef, {
         luca: luca,
