@@ -234,6 +234,7 @@ h2 {
   text-align: center;
   border-radius: 3px;
   cursor: pointer;
+  user-select: none;
 }
 
 .button:active {
