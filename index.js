@@ -22,6 +22,16 @@ const scaleIcon = document.querySelector('.fa-scale-balanced')
 const main = document.querySelector('main')
 const icons = [houseIcon, scaleIcon]
 
+const modal = /*html*/ `
+  <fieldset id="modal">
+    <p id="message"></p>
+    <div class="modal-btns">
+      <button class="modal-btn">Cancel</button>
+      <button class="modal-btn">Confirm</button>
+    </div>
+  </fieldset>
+`
+
 icons.forEach(icon => {
   icon.addEventListener('click', e => {
     houseIcon.classList.remove('active')
@@ -109,8 +119,11 @@ function render() {
           </button>
         </div>
       </section>
+      ${modal}
       `
       document.getElementById('progress').style.width = ((totalCount / 1000) * 333) + 'px'
+
+      document.getElementById('message').textContent = 'Are you sure you want to pay your child?'
 
     } else {
       main.innerHTML = /* html */ `
@@ -237,6 +250,16 @@ function render() {
         </div>
         
         <div class="bonus">
+          <div class="bonus-name">Dolby Surround</div>
+          <div class="bonus-points negative">-5pts</div>
+          <div class="buttons">
+            <div class="button" data-points="-5" data-child="Luca Malandrino">L</div>
+            <div class="button" data-points="-5" data-child="Marco Malandrino">M</div>
+            <div class="button" data-points="-5" data-child="Anna Malandrino">A</div>
+          </div>
+        </div>
+
+        <div class="bonus">
           <div class="bonus-name">The Sleeping Beauty</div>
           <div class="bonus-points negative">-5pts</div>
           <div class="buttons">
@@ -266,6 +289,8 @@ function render() {
           </div>
         </div>    
       </section>
+
+      ${modal}
       `
     }
   })
@@ -275,46 +300,60 @@ render()
 
 main.addEventListener('click', e => {
   if(e.target.classList.contains('fa-refresh')) {
-    console.log(e.target)
-    const updateObj = e.target.dataset.child === 'Luca Malandrino' ? {luca: 0} :
-                      e.target.dataset.child === 'Marco Malandrino' ? {marco: 0} : {anna: 0}
-    updateDoc(childrenDocRef, updateObj).then(console.log(updateObj))
-    render()
+    document.querySelector('fieldset').style.display = 'block'
+    document.querySelectorAll('.modal-btn')[0].addEventListener('click', function closeModal(event) {
+      document.querySelector('fieldset').style.display = 'none'
+      event.target,removeEventListener('click', closeModal)
+    })
+    document.querySelectorAll('.modal-btn')[1].addEventListener('click', function refreshPoints() {
+      const updateObj = e.target.dataset.child === 'Luca Malandrino' ? {luca: 0} :
+      e.target.dataset.child === 'Marco Malandrino' ? {marco: 0} : {anna: 0}
+      updateDoc(childrenDocRef, updateObj).then(console.log(updateObj))
+      render()
+    })
   } else if(e.target.dataset.points) {
-    getDoc(childrenDocRef).then(snapshot => {
-      let { anna, luca, marco, totalCount } = snapshot.data()
-      const points = Number(e.target.dataset.points)
+    document.querySelector('fieldset').style.display = 'block'
+    let bonusPoints = Number(e.target.dataset.points)
+    document.getElementById('message').textContent = bonusPoints > 0 ? `Add ${bonusPoints}pts to ${e.target.dataset.child.replace(' Malandrino', '')}?`: 
+                                                                  `Remove ${String(bonusPoints).replace('-', '')}pts from ${e.target.dataset.child.replace(' Malandrino', '')}?`
 
-      switch(e.target.dataset.child) {
-        case 'Luca Malandrino':
-          luca += points
-          console.log('luca')
-          break
-        case 'Marco Malandrino':
-          marco += points
-          console.log('marco')
-          break
-        case 'Anna Malandrino':
-          anna += points
-          console.log('anna')
-          break
-      }
-      
-      totalCount += points
-      totalCount = totalCount % 1000
-      totalCount = totalCount < 0 ? 0 : totalCount
+    document.querySelectorAll('.modal-btn')[0].addEventListener('click', function closeModal(event) {
+      document.querySelector('fieldset').style.display = 'none'
+      event.target,removeEventListener('click', closeModal)
+    })
+    document.querySelectorAll('.modal-btn')[1].addEventListener('click', function addPoints(event) {
+      getDoc(childrenDocRef).then(snapshot => {
+        let { anna, luca, marco, totalCount } = snapshot.data()
+        const points = Number(e.target.dataset.points)
 
-      setDoc(childrenDocRef, {
-        luca: luca,
-        marco: marco,
-        anna: anna,
-        totalCount: totalCount
+        switch(e.target.dataset.child) {
+          case 'Luca Malandrino':
+            luca += points
+            break
+          case 'Marco Malandrino':
+            marco += points
+            break
+          case 'Anna Malandrino':
+            anna += points
+            break
+        }
+        
+        totalCount += points
+        totalCount = totalCount % 1000
+        totalCount = totalCount < 0 ? 0 : totalCount
+
+        setDoc(childrenDocRef, {
+          luca: luca,
+          marco: marco,
+          anna: anna,
+          totalCount: totalCount
+        })
       })
 
       render()
 
-      window.alert(points > 0 ? `Added ${points}pts to ${e.target.dataset.child.replace(' Malandrino', '')}`: 
-                                `Removed ${String(points).replace('-', '')}pts from ${e.target.dataset.child.replace(' Malandrino', '')}`)
+      event.target.removeEventListener('click', addPoints)
+
     })
   }
 }) 
