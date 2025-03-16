@@ -66,6 +66,7 @@ main {
   height: 45px;
   border-radius: 10px;
   justify-content: space-evenly;
+  overflow: hidden;
 }
 
 .divider {
@@ -100,8 +101,8 @@ main {
 
 #progress {
   height: 45px;
-  border-radius: 10px;
   width: 200px;
+  border-radius: 10px;
   background: #FFDE00;
   left: calc(50vw - 166.5px);
   z-index: 1;
